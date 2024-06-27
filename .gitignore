@@ -1,0 +1,46 @@
+
+
+
+
+
+
+# Xcode
+# Xcode - Build data
+DerivedData/
+build/
+
+# Xcode - Personal settings
+*.xcuserdata
+*.xcuserstate
+
+# Xcode - Indexes
+*.xccheckout
+*.xcscmblueprint
+
+# Swift Package Manager
+/.build/
+.swiftpm/xcode/package.pins
+
+# CocoaPods
+/Pods/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+
+# Carthage
+Carthage/Build/
+
+# User-specific files
+*.swp
+*.swo
+*.vim
+
+# macOS
+.DS_Store
+
+# Temporary files
+*.tmp
+*.temp
+
