@@ -5,6 +5,10 @@
 //  Created by Elin.Andersson on 2024-06-27.
 //
 
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseMessaging // Om du behöver Firebase Messaging
+
 import SwiftUI
 
 struct VitaminScheduleView: View {
@@ -141,8 +145,8 @@ struct VitaminScheduleView_Previews: PreviewProvider {
         VitaminScheduleView()
     }
 }
- */
  
+*/
 
 /*
 import Foundation

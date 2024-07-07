@@ -57,7 +57,7 @@
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "afterScreenUpdates"
+            key = "afterScreenUpdates:"
             value = "YES"
             isEnabled = "YES">
          </EnvironmentVariable>
