@@ -1,7 +1,35 @@
+# Ignore Google Service Info plist
+GoogleService-Info.plist
 
+# Ignore Xcode build artifacts and temporary files
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
 
+# Ignore Swift Package Manager artifacts
+Packages
+*.swiftpm
 
+# Ignore CocoaPods artifacts
+Pods/
+Podfile.lock
 
+# Ignore Carthage artifacts
+Carthage/
+
+# Ignore fastlane artifacts
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Ignore temporary files
+*.swp
+*.swo
+*~
+
+# Ignore environment variable files
+.env
 
 
 # Xcode
@@ -21,8 +49,6 @@ build/
 /.build/
 .swiftpm/xcode/package.pins
 
-# CocoaPods
-/Pods/
 
 # Fastlane
 fastlane/report.xml
