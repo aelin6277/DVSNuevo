@@ -3,12 +3,40 @@
 //  DVSNuevo
 //
 //  Created by Elin.Andersson on 2024-06-27.
-//import SwiftUI
-//import FirebaseCore
-//import FirebaseFirestore
-//import FirebaseMessaging // Om du behöver Firebase Messaging
+import SwiftUI
+import FirebaseCore
+import FirebaseAuth
+
+@main
+struct DVSNuevoApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+
+    var body: some Scene {
+        WindowGroup {
+            NavigationView {
+                ContentView()
+                    .onAppear {
+                        authenticateUser()
+                    }
+            }
+        }
+    }
+
+    private func authenticateUser() {
+        if Auth.auth().currentUser == nil {
+            Auth.auth().signInAnonymously() { authResult, error in
+                if let error = error {
+                    print("Error signing in anonymously: \(error)")
+                } else {
+                    print("Signed in anonymously with user ID: \(authResult?.user.uid ?? "unknown")")
+                }
+            }
+        }
+    }
+}
 
 
+/*
 import SwiftUI
 import FirebaseCore
 import FirebaseFirestore
@@ -28,6 +56,9 @@ struct DVSNuevoApp: App {
       }
     }
   }
+
+*/
+
 
 /*class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
