@@ -17,6 +17,7 @@ struct VitaminScheduleView: View {
             Text("D-Vitamin Schema")
                 .font(.title)
                 .padding(.bottom, 20)
+           
             
             Text("För barn upp till 5 år:")
                 .font(.headline)
@@ -70,7 +71,7 @@ struct VitaminScheduleView: View {
             Spacer()
         }
         .padding()
-        .navigationTitle("D-Vitamin Schema")
+       // .navigationTitle("D-Vitamin Schema")
     }
 }
 

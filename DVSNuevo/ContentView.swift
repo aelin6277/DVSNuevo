@@ -41,6 +41,81 @@ struct ContentView: View {
                         .padding()
                 }
 
+                NavigationLink(destination: ChildProfileView(selectedAvatar: $selectedAvatar, selectedImage: $selectedImage)
+                                .navigationTitle("Barnprofil")) {
+                    Text("Profil för barn")
+                        .padding()
+                }
+
+                NavigationLink(destination: VitaminScheduleView()
+                                .navigationTitle("D-Vitamin Schema")) {
+                    Text("D-Vitamin Schema")
+                        .padding()
+                }
+            }
+            .navigationTitle("DVS")
+            .onAppear {
+                loadSelectedImageOrAvatar()
+            }
+        }
+    }
+
+    private func loadSelectedImageOrAvatar() {
+        if let avatarName = UserDefaults.standard.string(forKey: "selectedAvatar") {
+            selectedAvatar = Image(avatarName)
+        } else if let imageData = UserDefaults.standard.data(forKey: "selectedImage"), let uiImage = UIImage(data: imageData) {
+            selectedImage = Image(uiImage: uiImage)
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+
+
+
+/*
+import SwiftUI
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseMessaging
+
+struct ContentView: View {
+    @State private var selectedAvatar: Image?
+    @State private var selectedImage: Image?
+    @StateObject private var viewModel = ViewModel()
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                if let image = selectedImage {
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+                        .clipShape(Circle())
+                        .padding()
+                } else if let avatar = selectedAvatar {
+                    avatar
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .padding()
+                } else {
+                    Image(systemName: "person.circle")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .foregroundColor(.gray)
+                        .padding()
+                }
+
                 NavigationLink(destination: ChildProfileView(selectedAvatar: $selectedAvatar, selectedImage: $selectedImage)) {
                     Text("Profil för barn")
                         .padding()
@@ -51,6 +126,8 @@ struct ContentView: View {
                         .padding()
                 }
 
+                // Ta bort följande knappar:
+                /*
                 Button(action: {
                     viewModel.addUserProfile(first: "Ada", last: "Lovelace", born: 1815, email: "ada@example.com", avatarUrl: "http://example.com/avatar.jpg")
                 }) {
@@ -90,6 +167,7 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                 }
+                */
             }
             .navigationTitle("DVS")
             .onAppear {
@@ -112,6 +190,9 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+*/
+
+
 
 
 //
