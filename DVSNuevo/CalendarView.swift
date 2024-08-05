@@ -4,6 +4,7 @@
 //
 //  Created by Elin.Andersson on 2024-06-27.
 //
+
 import SwiftUI
 
 struct CalendarView: View {
@@ -76,7 +77,6 @@ struct CalendarView: View {
             }
         }
         .padding()
-        .navigationTitle("Kalender")
         .onAppear {
             loadVitaminDaysForCurrentMonth()
         }
@@ -129,6 +129,7 @@ struct CalendarView_Previews: PreviewProvider {
         CalendarView()
     }
 }
+
 
 /*
 import SwiftUI

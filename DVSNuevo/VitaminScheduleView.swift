@@ -14,9 +14,9 @@ import SwiftUI
 struct VitaminScheduleView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("D-Vitamin Schema")
-                .font(.title)
-                .padding(.bottom, 20)
+           // Text("D-Vitamin Schema")
+           //     .font(.title)
+            //    .padding(.bottom, 20)
            
             
             Text("För barn upp till 5 år:")
@@ -71,7 +71,7 @@ struct VitaminScheduleView: View {
             Spacer()
         }
         .padding()
-       // .navigationTitle("D-Vitamin Schema")
+        .navigationTitle("D-Vitamin Schema")
     }
 }
 
